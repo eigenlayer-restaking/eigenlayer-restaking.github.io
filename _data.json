@@ -1,0 +1,107 @@
+{
+ "keyword": "eigenlayer restaking",
+ "h1": "EigenLayer Restaking",
+ "brand": "EigenLayer",
+ "niche": "stake",
+ "verb": "Stake",
+ "title": "EigenLayer Restaking - Open App",
+ "meta_description": "eigenlayer restaking: open the official app to stake ETH, LSTs, or EIGEN, delegate to an operator, and review risks before signing.",
+ "palette": {
+  "mode": "light",
+  "bg": "#FFFFFF",
+  "accent": "#1B0068",
+  "ink": "#120035"
+ },
+ "hero_h2": "Stake assets to help secure verifiable services",
+ "hero_lead": "EigenLayer Restaking routes ETH, LST, and EIGEN holders to the official app for deposits, operator delegation, reward visibility, and risk review.",
+ "badge": "Ethereum Stake",
+ "widget": {
+  "from": "ETH/LST/EIGEN",
+  "from_net": "Ethereum Mainnet",
+  "to": "EigenLayer",
+  "to_net": "Ethereum Mainnet",
+  "action": "Open EigenLayer App"
+ },
+ "trust": [
+  "Official app domain",
+  "Ethereum Mainnet",
+  "Liquid and native paths"
+ ],
+ "what_is": "EigenLayer is an Ethereum protocol that introduces restaking so users can extend cryptoeconomic security to Autonomous Verifiable Services, as described in the <a href=\"https://docs.eigencloud.xyz/eigenlayer/concepts/eigenlayer-overview\">official EigenLayer docs</a>. The app supports liquid restaking flows and native ETH restaking paths with operator delegation and documented slashing considerations.",
+ "how": [
+  {
+   "t": "Open the app",
+   "d": "Go to app.eigenlayer.xyz on Ethereum Mainnet and connect a Web3 wallet you control."
+  },
+  {
+   "t": "Choose an asset",
+   "d": "Use the token view for supported liquid assets, or follow the native ETH path if you operate an Ethereum validator."
+  },
+  {
+   "t": "Pick an operator",
+   "d": "Delegate available restaked balance to an operator; EigenLayer documents delegation as a single-operator, all-or-nothing action."
+  },
+  {
+   "t": "Approve and sign",
+   "d": "Review token approvals, deposit and delegation prompts, then confirm transactions in your wallet."
+  }
+ ],
+ "points": [
+  {
+   "h": "Official flow",
+   "p": "The <a href=\"https://docs.eigencloud.xyz/eigenlayer/restakers/restaking-guides/restaking-user-guide/liquid-restaking/restake-lsts\">restaking user guide</a> points users to the EigenLayer Web App for liquid restaking on Ethereum Mainnet."
+  },
+  {
+   "h": "Asset paths",
+   "p": "Liquid restaking covers supported assets shown in the app, including LSTs, EIGEN, and ERC-20 strategies; native ETH restaking uses an EigenPod."
+  },
+  {
+   "h": "Risk visible",
+   "p": "Delegated stake can become slashable depending on operator and AVS activity, so review operator allocations, withdrawal timing, and wallet permissions before signing."
+  }
+ ],
+ "eeat": [
+  {
+   "text": "EigenLayer overview",
+   "url": "https://docs.eigencloud.xyz/eigenlayer/concepts/eigenlayer-overview"
+  },
+  {
+   "text": "Restaking user guide",
+   "url": "https://docs.eigencloud.xyz/eigenlayer/restakers/restaking-guides/restaking-user-guide/liquid-restaking/restake-lsts"
+  },
+  {
+   "text": "Ethereum staking",
+   "url": "https://ethereum.org/en/staking/"
+  }
+ ],
+ "faq": [
+  {
+   "q": "What is eigenlayer restaking?",
+   "a": "eigenlayer restaking is EigenLayer's model for depositing native ETH, liquid staking tokens, EIGEN, or supported ERC-20 strategies and delegating them to operators that help secure AVSs.",
+   "open": true
+  },
+  {
+   "q": "How do I start eigenlayer restaking in the official app?",
+   "a": "Use <a href=\"https://app.eigenlayer.xyz/\">app.eigenlayer.xyz</a>, connect your wallet on Ethereum Mainnet, choose an asset, submit any required approval, and confirm deposit or delegation transactions.",
+   "open": false
+  },
+  {
+   "q": "Does eigenlayer restaking require an operator?",
+   "a": "For delegation, yes. EigenLayer docs state that stakers can delegate to a single operator at a time and that delegation applies to all available restaked balance.",
+   "open": false
+  },
+  {
+   "q": "What assets can be used for eigenlayer restaking?",
+   "a": "The liquid path includes supported assets displayed in the app, such as LSTs, EIGEN, and ERC-20 strategies; native ETH restaking requires validator operations and an EigenPod.",
+   "open": false
+  },
+  {
+   "q": "What risks should I review before eigenlayer restaking?",
+   "a": "Review slashing exposure, operator reputation, AVS allocations, withdrawal delays, and token approval permissions before signing any transaction.",
+   "open": false
+  }
+ ],
+ "official_url": "https://app.eigenlayer.xyz/",
+ "official_domain": "app.eigenlayer.xyz",
+ "footer_note": "Not the official app; verify app.eigenlayer.xyz before signing. Educational only, not financial advice."
+}
